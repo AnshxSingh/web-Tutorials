@@ -1,0 +1,79 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:white;
+    font-family: 'Poppins';
+}
+body{
+    background: #111;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.container{
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.hero-img-container{
+    height: 600px;
+    width: 600px;
+    background: linear-gradient(45deg,#f5bd4b,#ffae00);
+    animation: animate 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+.hero-img-container:nth-child(1){
+    position: absolute;
+    filter: blur(50px);
+}
+@keyframes animate {
+    0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    }
+
+.blob-img-1{
+    max-width: 100%;
+    scale: 1.2;
+    animation: blob-anime 3s infinite ;
+    transition: .2s ease-in-out;
+}
+@keyframes blob-anime {
+    0%{
+       transform: translate(0px); 
+    }
+    50%{
+        transform: translate(20px,30px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+.hero-img{
+    position: absolute;
+    max-width: 600px;
+    z-index: 1;
+    animation: hero-anime 3s infinite ;
+    transition: .2s ease-in-out;
+    bottom: -100px;
+    left: 100px;
+    scale: 1.2;
+}
+@keyframes hero-anime {
+    0%{
+       transform: translate(0px); 
+    }
+    50%{
+        transform: translate(30px,20px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
